@@ -1,0 +1,22 @@
+@import'./reset';
+$background:blue;
+$text-color:white;
+$font-weight:(
+    'regular':200,
+    'medium':500,
+    'bold':900
+);
+body {
+    background: $background;
+}
+.main{
+    width: 90%;
+    margin: 0  auto;
+    p{
+        color: $text-color;
+        font-weight: map-get($font-weight, regular  );
+        &:hover{
+            color: red;
+        }
+    }
+}
