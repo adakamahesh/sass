@@ -1,20 +1,23 @@
-@import'./reset';
+@import'./reset';// this is used to import the other paths
+@function weight($weight-name){
+    @return map-get($font-weight,$weight-name);
+}// this is work like as a functions
 $background:blue;
 $text-color:white;
 $font-weight:(
     'regular':200,
     'medium':500,
     'bold':900
-);
+);// the above lines are global declaration
 body {
-    background: $background;
+    background: $background;//it is use for global declaration
 }
 .main{
     width: 90%;
     margin: 0  auto;
-    p{
+     p{
         color: $text-color;
-        font-weight: map-get($font-weight, regular  );
+        font-weight:weight(regular);//this is function calling
         &:hover{
             color: red;
         }
