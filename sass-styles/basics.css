@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: blue;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.main_paragraph {
+  color: white;
+  font-weight: 200;
+}
+.main_paragraph:hover {
+  color: red;
+}
+
+.some-element {
+  background: blue;
+}/*# sourceMappingURL=basics.css.map */

@@ -1,0 +1,47 @@
+@import "./reset"; // this is used to import the other paths
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+} // this is work like as a functions
+
+@mixin theme($light-theme: true) {
+  // Define default background color
+  $background: $background; 
+  @if not $light-theme {
+    $background: green; 
+  }
+  // Apply the background color
+  background: $background;
+}// this is mixin create
+@mixin flexcenter($direction){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+$background: blue;
+$text-color: white;
+$font-weight: (
+  "regular": 200,
+  "medium": 500,
+  "bold": 900,
+); // the above lines are global declaration
+body {
+  background: $background; //it is use for global declaration
+}
+.main {
+  @include flexcenter(center);//it is used to call mixin
+  width: 90%;
+  margin: 0 auto;
+  &_paragraph {
+    color: $text-color;
+    font-weight: weight(regular); //this is function calling
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.some-element {
+    @include theme($light-theme: true); 
+  }
