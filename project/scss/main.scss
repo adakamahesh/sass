@@ -1,6 +1,10 @@
 @import "config";//this is used to import to the other folders
 @import 'home';
 @import 'menu';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'responsive';
 body{
 background:$primary-color ;
 color: set-text-color($primary-color);
@@ -14,6 +18,9 @@ h1,h2,h3{
 a{
     color: white;
     text-decoration: none;
+}
+.text-secondary{
+    color: $secondary-color;
 }
 header{
     position: fixed;
