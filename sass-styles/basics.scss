@@ -43,5 +43,5 @@ body {
 }
 
 .some-element {
-    @include theme($light-theme: true); 
+    @include theme($light-theme: false); 
   }
